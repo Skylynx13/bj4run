@@ -11,6 +11,8 @@
  */
 package com.qxu.bj4run.record;
 
+import java.util.ArrayList;
+
  /**
  * ClassName: RecordReader <br/>
  * Description: TODO <br/>
@@ -25,6 +27,8 @@ package com.qxu.bj4run.record;
  */
 
 public class RecordReader {
+    String keyword = "abc";
+    ArrayList<RecordEntry> recordList = new ArrayList<RecordEntry>();
 
     public static void main (String[] args) {
         System.out.println("Record Reader Start...");
