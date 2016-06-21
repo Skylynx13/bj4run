@@ -11,6 +11,7 @@
  */
 package com.qxu.bj4run.record;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
  /**
@@ -28,10 +29,23 @@ import java.util.Date;
 
 public class RecordEntry {
     public String name;
-    public Date date;
+    public String date;
+    public String time;
     public String content;
     
-    public RecordEntry(String pLine) {
+    public RecordEntry() {
         
+    }
+    
+    public RecordEntry(RecordEntry entry) {
+        name = entry.name;
+        date = entry.date;
+        time = entry.time;
+        content = entry.content;
+    }
+    
+    @Override
+    public String toString() {
+        return name + "\t" + date + " " + time + "\t" + content;
     }
 }
